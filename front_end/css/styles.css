@@ -31,3 +31,8 @@ header {
 .buttons button {
     margin: 0 5px; /* Adjust this value as needed */
 }
+
+.item-count {
+    text-align: center;
+    margin-top: 10px;
+}
