@@ -1,0 +1,12 @@
+body {
+    background-color: #333333;
+}
+
+.first_row, .second_row, .third_row {
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
