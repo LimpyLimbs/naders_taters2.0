@@ -1,5 +1,10 @@
 body {
-    background-color: #333333;
+    background-color: #1f1f1f;
+    color: rgb(202, 202, 202);
+}
+
+header {
+    text-align: center;
 }
 
 .first_row, .second_row, .third_row {
@@ -10,3 +15,19 @@ body {
     justify-content: space-between;
 }
 
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.buttons {
+    margin-top: 10px; /* Adjust this value as needed */
+}
+
+.buttons button {
+    margin: 0 5px; /* Adjust this value as needed */
+}
