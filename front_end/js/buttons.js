@@ -1,25 +1,37 @@
-const incrementButton = document.querySelector('.increment');
-const decrementButton = document.querySelector('.decrement');
-const itemCountSpan = document.getElementById('item-count');
+const incrementButtons = document.querySelectorAll('.increment');
+const decrementButtons = document.querySelectorAll('.decrement');
 
-// Initial item count
-let itemCount = 0;
+const itemCounts = {
+    classic: 0,
+    barbeque: 0, 
+    cheddar: 0,
+    'dill-pickle': 0,
+    jalapano: 0,
+    'kettle-cooked': 0,
+    'salt-and-vinegar': 0,
+    'salt-and-pepper': 0,
+    'sour-cream-and-onion': 0
+};
 
-// Update item count function
-function updateItemCount() {
-    itemCountSpan.textContent = itemCount;
+function updateItemCount(id) {
+    const itemCountSpan = document.getElementById(`item-count-${id}`);
+    itemCountSpan.textContent = itemCounts[id];
 }
 
-// Event listener for increment button
-incrementButton.addEventListener('click', function() {
-    itemCount++;
-    updateItemCount();
+incrementButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const id = button.getAttribute('data-id');
+        itemCounts[id]++;
+        updateItemCount(id);
+    });
 });
 
-// Event listener for decrement button
-decrementButton.addEventListener('click', function() {
-    if (itemCount > 0) {
-        itemCount--;
-        updateItemCount();
-    }
+decrementButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const id = button.getAttribute('data-id');
+        if (itemCounts[id] > 0) {
+            itemCounts[id]--;
+            updateItemCount(id);
+        }
+    });
 });
