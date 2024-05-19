@@ -53,9 +53,11 @@ addToCartButtons.forEach(button => {
             } else {
                 cart[id] = itemCounts[id];
             }
+            const itemsAdded = itemCounts[id];
             itemCounts[id] = 0; // Reset item count after adding to cart
             updateItemCount(id);
             updateCartDisplay();
+            alert(`Added ${itemsAdded} items of ${id.replace(/_/g, ' ')} to the cart.`);
         }
     });
 });
