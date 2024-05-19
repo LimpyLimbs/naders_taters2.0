@@ -22,7 +22,6 @@ function updateItemCount(id) {
 }
 
 function updateCartDisplay() {
-    // Logic to update the cart display goes here (e.g., updating the DOM, showing a modal, etc.)
     console.log('Cart:', cart);
 }
 
@@ -54,7 +53,7 @@ addToCartButtons.forEach(button => {
                 cart[id] = itemCounts[id];
             }
             const itemsAdded = itemCounts[id];
-            itemCounts[id] = 0; // Reset item count after adding to cart
+            itemCounts[id] = 0;
             updateItemCount(id);
             updateCartDisplay();
             alert(`Added ${itemsAdded} items of ${id.replace(/_/g, ' ')} to the cart.`);

@@ -7,6 +7,22 @@ header {
     text-align: center;
 }
 
+a {
+    color: rgb(202, 202, 202);
+}
+
+a:active {
+    color: rgb(202, 202, 202);
+}
+
+a:hover {
+    color: rgb(202, 202, 202);
+}
+
+a:visited {
+    color: rgb(202, 202, 202);
+}
+
 .first_row, .second_row, .third_row {
     padding: 20px;
     margin-left: 100px;
@@ -35,4 +51,16 @@ header {
 .item-count {
     text-align: center;
     margin-top: 10px;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
 }
